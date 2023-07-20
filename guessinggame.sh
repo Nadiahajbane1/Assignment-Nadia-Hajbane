@@ -3,8 +3,8 @@
 
 count=$(ls -1 | wc -l)
 
-function correct_guess {        # One function...
-    if [[ $1 -lt $2 ]]          # One if statement ...
+function correct_guess {        
+    if [[ $1 -lt $2 ]]          # if statement ...
     then
 	echo "Too low!"
     elif [[ $1 -gt $2 ]]
