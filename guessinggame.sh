@@ -16,7 +16,7 @@ function correct_guess {
     fi
 }
 
-while [[ $count -ne $guess ]]    # One loop...
+while [[ $count -ne $guess ]]
 do
     read -p "Guess how many files are in the current directory? " guess
     # echo "You entered: $guess"
