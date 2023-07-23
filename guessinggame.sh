@@ -3,23 +3,23 @@
 
 count=$(ls -1 | wc -l)
 
-function correct_guess {        
+function guess {        
     if [[ $1 -lt $2 ]]          # if statement ...
     then
-	echo "Too low!"
+	echo "The prompt you guessed is low. Try again:"
     elif [[ $1 -gt $2 ]]
     then
-	echo "Too high!"
+	echo "The prompt you guessed is high. Try again:"
     else
 	echo ""
-	echo "Congratualations! You guessed right!"
+	echo "Congratualations! You guessed right"
     fi
 }
 
 while [[ $count -ne $guess ]]
 do
     read -p "Guess how many files are in the current directory? " guess
-    # echo "You entered: $guess"
-    echo $(correct_guess $guess $count)
+    # echo "You entered: $Guess"
+    echo $(_guess $Guess $count)
     echo ""
 done
